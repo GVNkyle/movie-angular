@@ -9,7 +9,7 @@ import { Tv, TvCredits, TvDto, TvImage, TvTrailer } from '../models/tv';
 })
 export class TvsService {
   baseUrl: string = 'https://api.themoviedb.org/3';
-  apiKey: string = process.env.API_KEY;
+  apiKey: string = '9a5f6f8e54a84fb4f6444d2a4b8a4a84';
   constructor(private http : HttpClient) { }
 
   getTvs(type: string = 'popular', count: number = 12) {
