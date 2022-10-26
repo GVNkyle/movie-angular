@@ -2,14 +2,10 @@
   <a class="movie-item" [routerLink]="'/movie/' + movie.id">
     <div class="movie-item-rating">
       <i class="app-icons">star</i>
-      <span>{{ movie.vote_average }}</span
-      >/10
+      <span>{{ movie.vote_average }}</span>/10
     </div>
     <div class="movie-item-image">
-      <img
-        [src]="imagesSizes.medium + movie.poster_path"
-        alt=""
-      />
+      <img [src]="imagesSizes.medium + movie.poster_path" alt="" loading="lazy" />
     </div>
     <div class="movie-item-title">{{ movie.title }}</div>
   </a>
@@ -18,14 +14,10 @@
   <a class="movie-item" [routerLink]="'/tvshow/' + tv.id">
     <div class="movie-item-rating">
       <i class="app-icons">star</i>
-      <span>{{ tv.vote_average }}</span
-      >/10
+      <span>{{ tv.vote_average }}</span>/10
     </div>
     <div class="movie-item-image">
-      <img
-        [src]="imagesSizes.medium + tv.poster_path"
-        alt=""
-      />
+      <img [src]="imagesSizes.medium + tv.poster_path" alt="" loading="lazy" />
     </div>
     <div class="movie-item-title">{{ tv.name }}</div>
   </a>
