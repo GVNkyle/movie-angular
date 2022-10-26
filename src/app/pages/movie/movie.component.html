@@ -4,11 +4,7 @@
     <p-tabPanel header="Overview">
       <div class="grid">
         <div class="col-12 md:col-3 lg:col-3">
-          <img
-            class="poster"
-            [src]="imagesSizes.medium + movie.poster_path"
-            [alt]="movie.title"
-          />
+          <img class="poster" [src]="imagesSizes.medium + movie.poster_path" [alt]="movie.title" />
         </div>
         <div class="col-12 md:col-9 lg:col-9">
           <h2>Overview</h2>
@@ -54,10 +50,7 @@
       <div class="grid">
         <ng-container *ngFor="let trailer of trailers">
           <div class="col-12 md:col-4 ld:col-4">
-            <app-video-embed
-              [site]="trailer.site"
-              [key]="trailer.key"
-            ></app-video-embed>
+            <app-video-embed [site]="trailer.site" [key]="trailer.key"></app-video-embed>
           </div>
         </ng-container>
       </div>
@@ -66,23 +59,14 @@
       <div class="grid">
         <ng-container *ngFor="let image of images?.backdrops">
           <div class="col-12 md:col-4 ld:col-4">
-            <p-image
-              [src]="imagesSizes.extraLarge + image.file_path"
-              alt="Image"
-              width="100%"
-              [preview]="true"
-            ></p-image>
+            <p-image [src]="imagesSizes.large + image.file_path" alt="Image" width="100%" [preview]="true" loading="lazy" >
+            </p-image>
           </div>
         </ng-container>
       </div>
     </p-tabPanel>
   </p-tabView>
-  <p-carousel
-    *ngIf="movieCredits"
-    [value]="movieCredits.cast"
-    [numVisible]="5"
-    [numScroll]="1"
-  >
+  <p-carousel *ngIf="movieCredits" [value]="movieCredits.cast" [numVisible]="5" [numScroll]="1">
     <ng-template let-actor pTemplate="item">
       <div class="actor">
         <img [src]="imagesSizes.medium + actor.profile_path" alt="" />

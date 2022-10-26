@@ -3,21 +3,14 @@
     <ng-container *ngFor="let item of movies; let i = index">
       <div class="slide" *ngIf="i === currentSlideIndex" @slideFade>
         <div class="slide-bg">
-          <img
-            class="slide-bg-image"
-            [src]="imagesSizes.extraLarge + item.backdrop_path"
-            alt=""
-          />
+          <img class="slide-bg-image" [src]="imagesSizes.extraLarge + item.backdrop_path" alt="" loading="lazy"/>
         </div>
         <div class="slide-panel">
           <h2 class="name">{{ item.title }}</h2>
           <div class="meta">
             <div class="info">
-              <span class="rating"
-                ><span class="app-icons">star_rate</span
-                ><span class="rating-value">{{ item.vote_average }}</span
-                ><span>/10</span></span
-              >
+              <span class="rating"><span class="app-icons">star_rate</span><span class="rating-value">{{
+                  item.vote_average }}</span><span>/10</span></span>
               <span>{{ item.vote_count }}</span>
               <span>{{ item.release_date | date: "yyyy" }}</span>
             </div>
@@ -33,21 +26,14 @@
     <ng-container *ngFor="let item of tvs; let i = index">
       <div class="slide" *ngIf="i === currentSlideIndex" @slideFade>
         <div class="slide-bg">
-          <img
-            class="slide-bg-image"
-            [src]="imagesSizes.extraLarge + item.backdrop_path"
-            alt=""
-          />
+          <img class="slide-bg-image" [src]="imagesSizes.extraLarge + item.backdrop_path" alt="" loading="lazy"/>
         </div>
         <div class="slide-panel">
           <h2 class="name">{{ item.title }}</h2>
           <div class="meta">
             <div class="info">
-              <span class="rating"
-                ><span class="app-icons">star_rate</span
-                ><span class="rating-value">{{ item.vote_average }}</span
-                ><span>/10</span></span
-              >
+              <span class="rating"><span class="app-icons">star_rate</span><span class="rating-value">{{
+                  item.vote_average }}</span><span>/10</span></span>
               <span>{{ item.vote_count }}</span>
               <span>{{ item.release_date | date: "yyyy" }}</span>
             </div>
